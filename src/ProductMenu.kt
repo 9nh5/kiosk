@@ -45,11 +45,12 @@ class ProductMenu {
 
     }
     fun addMenu(item:Int, foods:String){
+
         products.filter {it.id==item && it.category==foods}.forEach{
             println("\n[해당 메뉴를 선택하셨습니다] \n\n"+"${Menu(it).displayInfo()}\n")
         }
     }
-    
+
 
     fun addItem(menu:String, id:Int):Abstractmenu?{
         return products.filter{it.category==menu}.find{it.id==id-1}
